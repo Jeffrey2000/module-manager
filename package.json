@@ -1,0 +1,19 @@
+{
+  "name": "assessment_2020",
+  "version": "1.0.0",
+  "description": "Student module manager",
+  "main": "index.js",
+  "dependencies": {
+    "flatpickr": "^4.6.3",
+    "node-sass": "^4.13.1"
+  },
+  "devDependencies": {
+    "node-sass": "^3.4.2"
+  },
+  "scripts": {
+    "css": "node-sass styles/styles.scss -o styles",
+    "css:watch": "npm run css && node-sass styles/styles.scss -wo styles"
+  },
+  "author": "Jeffrey Kola-Abodunde",
+  "license": "ISC"
+}

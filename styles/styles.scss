@@ -1,0 +1,202 @@
+$header_font_size : 32px;
+$view_height:80vh;
+$primary_color_l: black;
+
+@mixin normal_input_field {
+    height: 57px;
+    width: 100%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    border: none;
+    background-color: white;
+}
+
+@mixin butto_style{
+    background-color: white;
+    width: 100%;
+    height: 81px;
+    border-radius: 47px;
+    box-shadow: -12px -12px 12px 0 #f5f5f5,
+    12px 12px 20px 0 rgba(0,0,0,.03);
+    border:none;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom:36px ;
+}
+
+
+body {
+    height: 80vh;
+    width: 100%;
+    font-family: Calibri, sans-serif;
+    color: $primary_color_l;
+    margin: 0;
+    overflow: hidden;
+
+}
+
+#container{
+    height: 900px;
+    padding: 110px;
+}
+
+.header_font{
+    font-size: $header_font_size;
+    font-weight: 700;
+    margin-bottom: 50px;
+    span{
+        font-weight: 300;
+        margin-bottom: 59px;
+    }
+}
+
+
+//MODULE LIST SECTION
+.view_selection{
+    padding-right: 25px;
+    display: grid;
+    grid-template-rows: repeat(7, 1fr);
+    button{
+    @include butto_style();
+    text-align: center;
+    }
+    .add_module{
+        height:70px;
+        width: 70px;
+        border-radius: 50px;
+        box-shadow: none;
+        text-align: center;
+    }
+
+    height:850px;
+    overflow-y: scroll;
+}
+
+.section_wrapper{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    
+}
+
+
+.add_icon{
+    height: 50px;
+    width: 50px;
+    opacity: 0.5;
+    &:hover{
+        //Add ease in amimation
+        opacity: 1;
+    }
+}
+
+.active_view_container{
+    border-left: 1px solid black;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+//ADD TASK INFORMATION
+.add_task_information{
+    display: grid;
+    grid-template-columns: 50% 50%;    
+    grid-column-gap: 10%;                                                         
+    width: 100%;
+    height: 100%;
+}
+
+
+input[type='datetime-local']{
+    @extend input[type='text']; 
+}
+
+
+.tasks{
+    display: none;
+}
+
+
+    input[type='text']{
+        @include normal_input_field();
+        
+        &::after{
+            border:none;
+        }
+        font-size: 24px;
+        font-family: Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+@mixin information_desc(){
+    display: grid;
+    grid-template-rows: 25% 75%;
+    .input_description{
+        display: flex;
+
+        span{
+            font-size: 22px;
+        }
+    }
+}
+
+//Left task information
+.task_info_left{
+    display: grid;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-template-rows: auto auto auto auto;
+
+    .info_container{
+        @include information_desc();
+    }
+
+}
+
+//Right Task information
+//Task description and submission
+
+.task_info_right{
+    display: grid;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-template-rows: 27.9% auto auto auto;
+    .info_container{
+    @include information_desc();
+    textarea{
+        @include normal_input_field();
+        height: 100%;
+        font-size: 16px;
+        color: black    ;
+    }
+
+    
+}
+}
+
+//Submit button styling
+input[type="submit"]{
+    position: relative;
+    top: 20px;
+    float: right;
+    @include butto_style();
+    height: 35px;
+    width: 50%;
+    background: black;
+    color: #eeeeee;
+}
+
+//priorities css 
+.priorities{
+    display: flex;
+}
+
+//Task display container
+.task_display_container{
+    display: block;
+    padding: 25px;
+    height: 80vh;
+    display: none;
+    .show_all_tasks{
+        height: 100%;
+        width: 100%;
+        border: 1px solid black;
+    }
+}
+
