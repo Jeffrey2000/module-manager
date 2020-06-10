@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Module Manager</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="./src/index.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <section class="section_wrapper">xcz
+            <section class="view_selection">
+                <p class="header_font">MODULE <span>LIST</span></p>
+                <button class="add_module" style="text-align: center;"><img class="add_icon"
+            src="./assets/icons/add.svg" /></button>
+            </section>
+
+            <section class="active_view_container">
+                <!--Add task information title-->
+                <h1 class="header_font add_task">ADD <span>TASK</span></h1>
+                <h1 class="header_font tasks">TASKS</h1>
+                <!--Adding task information -->
+                <section class="add_task_information">
+                    <section class="task_info_left">
+                        <div class="info_container">
+                            <div class="input_description">
+                                <span>
+                  Task Name
+                </span>
+                            </div>
+                            <input type="text" placeholder="Pg 312 Ex 1" />
+                        </div>
+                        <div class="info_container">
+                            <div class="input_description">
+                                <span>
+                  Task Deadline
+                </span>
+                            </div>
+                            <input class="datepicker" type="datetime-local" />
+                        </div>
+                        <div class="info_container">
+                            <div class="input_description">
+                                <span> Task Priority </span>
+                            </div>
+                            <div class="priorities">
+                                <input type="radio" id="high" name="priority" value="high" />
+                                <input type="radio" id="medium" name="priority" value="medium" />
+                                <input type="radio" id="low" name="priority" value="low" />
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="task_info_right">
+                        <section class="info_container">
+                            <div class="input_description">
+                                <span>
+                  Task description
+                </span>
+                            </div>
+                            <textarea placeholder="Finish off all maths exercises and use solution booklet"></textarea>
+                        </section>
+
+                        <section>
+                            <input type="submit" />
+                        </section>
+                    </section>
+                </section>
+                <!--End of adding of task information-->
+
+                <section class="task_display_container">
+                    <section class="show_all_tasks">
+
+                    </section>
+                </section>
+            </section>
+        </section>
+    </div>
+</body>
+
+</html>

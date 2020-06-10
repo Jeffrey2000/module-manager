@@ -1,0 +1,146 @@
+body {
+  height: 80vh;
+  width: 100%;
+  font-family: Calibri, sans-serif;
+  color: black;
+  margin: 0;
+  overflow: hidden; }
+
+#container {
+  height: 900px;
+  padding: 110px; }
+
+.header_font {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 50px; }
+  .header_font span {
+    font-weight: 300;
+    margin-bottom: 59px; }
+
+.view_selection {
+  padding-right: 25px;
+  display: grid;
+  grid-template-rows: repeat(7, 1fr);
+  height: 850px;
+  overflow-y: scroll; }
+  .view_selection button {
+    background-color: white;
+    width: 100%;
+    height: 81px;
+    border-radius: 47px;
+    box-shadow: -12px -12px 12px 0 #f5f5f5, 12px 12px 20px 0 rgba(0, 0, 0, 0.03);
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 36px;
+    text-align: center; }
+  .view_selection .add_module {
+    height: 70px;
+    width: 70px;
+    border-radius: 50px;
+    box-shadow: none;
+    text-align: center; }
+
+.section_wrapper {
+  display: grid;
+  grid-template-columns: 30% 70%; }
+
+.add_icon {
+  height: 50px;
+  width: 50px;
+  opacity: 0.5; }
+  .add_icon:hover {
+    opacity: 1; }
+
+.active_view_container {
+  border-left: 1px solid black;
+  padding-left: 25px;
+  padding-right: 25px; }
+
+.add_task_information {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-column-gap: 10%;
+  width: 100%;
+  height: 100%; }
+
+.tasks {
+  display: none; }
+
+input[type='text'], input[type='datetime-local'] {
+  height: 57px;
+  width: 100%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  border: none;
+  background-color: white;
+  font-size: 24px;
+  font-family: Calibri, 'Trebuchet MS', sans-serif; }
+  input[type='text']::after, input[type='datetime-local']::after {
+    border: none; }
+
+.task_info_left {
+  display: grid;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  grid-template-rows: auto auto auto auto; }
+  .task_info_left .info_container {
+    display: grid;
+    grid-template-rows: 25% 75%; }
+    .task_info_left .info_container .input_description {
+      display: flex; }
+      .task_info_left .info_container .input_description span {
+        font-size: 22px; }
+
+.task_info_right {
+  display: grid;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  grid-template-rows: 27.9% auto auto auto; }
+  .task_info_right .info_container {
+    display: grid;
+    grid-template-rows: 25% 75%; }
+    .task_info_right .info_container .input_description {
+      display: flex; }
+      .task_info_right .info_container .input_description span {
+        font-size: 22px; }
+    .task_info_right .info_container textarea {
+      height: 57px;
+      width: 100%;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+      border: none;
+      background-color: white;
+      height: 100%;
+      font-size: 16px;
+      color: black; }
+
+input[type="submit"] {
+  position: relative;
+  top: 20px;
+  float: right;
+  background-color: white;
+  width: 100%;
+  height: 81px;
+  border-radius: 47px;
+  box-shadow: -12px -12px 12px 0 #f5f5f5, 12px 12px 20px 0 rgba(0, 0, 0, 0.03);
+  border: none;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 36px;
+  height: 35px;
+  width: 50%;
+  background: black;
+  color: #eeeeee; }
+
+.priorities {
+  display: flex; }
+
+.task_display_container {
+  display: block;
+  padding: 25px;
+  height: 80vh;
+  display: none; }
+  .task_display_container .show_all_tasks {
+    height: 100%;
+    width: 100%;
+    border: 1px solid black; }
